@@ -1,0 +1,61 @@
+{
+  "name": "sv-react-widgets",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "reinstall": "npm cache clean && rimraf node_modules/* && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sv1809/sv-react-widgets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sv1809/sv-react-widgets/issues"
+  },
+  "homepage": "https://github.com/sv1809/sv-react-widgets#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "classnames": "^2.2.5",
+    "clean-webpack-plugin": "^0.1.9",
+    "connect-history-api-fallback": "^1.2.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "http-proxy-middleware": "^0.17.0",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "lodash.iserror": "^3.1.1",
+    "ora": "^0.2.3",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
+    "raw-body": "^2.1.7",
+    "rimraf": "^2.5.4",
+    "shelljs": "^0.7.1",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.1",
+    "webpack-merge": "^0.14.0"
+  },
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
+  }
+}
