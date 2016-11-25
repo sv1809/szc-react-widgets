@@ -1,5 +1,5 @@
 {
-  "name": "sv-react-widgets",
+  "name": "szc-react-widgets",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sv1809/sv-react-widgets.git"
+    "url": "git+https://github.com/sv1809/szc-react-widgets.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sv1809/sv-react-widgets/issues"
+    "url": "https://github.com/sv1809/szc-react-widgets/issues"
   },
-  "homepage": "https://github.com/sv1809/sv-react-widgets#readme",
+  "homepage": "https://github.com/sv1809/szc-react-widgets#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.18.2",
