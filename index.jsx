@@ -2,20 +2,14 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Select from './src/select/select';
 
-const selectItems = [
-    {
-        value: 'test',
-        label: 'test'
-    },
-    {
-        value: 'test1',
-        label: 'test1'
-    },
-    {
-        value: 'test2',
-        label: 'test2'
-    }
-]
+const selectItems = []
+
+for (let i = 0; i < 30; i++) {
+    selectItems.push({
+        value: 'value' + i,
+        label: 'label' + i
+    })
+}
 
 class App extends React.Component {
     constructor(props) {
@@ -31,7 +25,7 @@ class App extends React.Component {
     }
 
     render() {
-        return (<Select value={this.state.value} items={selectItems} onSelect={this.onSelect} idField='value' textField='label' nullable={true}/>);
+        return (<Select value={this.state.value} items={selectItems} onSelect={this.onSelect} idField='value' textField='label' nullable={true} searchable={true} />);
     }
 }
 
