@@ -11,6 +11,9 @@ var env = process.env.NODE_ENV === 'testing'
     : config.build.env;
 
 var webpackConfig = merge(baseWebpackConfig, {
+    entry: {
+        index: './index.js',
+    },
     module: {
         loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true })
     },
@@ -30,13 +33,13 @@ var webpackConfig = merge(baseWebpackConfig, {
             beautify: false,
             comments: false,
             compress: {
-                sequences     : true,
-                booleans      : true,
-                loops         : true,
-                unused      : true,
-                warnings    : false,
+                sequences: true,
+                booleans: true,
+                loops: true,
+                unused: true,
+                warnings: false,
                 drop_console: true,
-                unsafe      : true
+                unsafe: true
             }
         }),
         // new webpack.optimize.OccurenceOrderPlugin(),
@@ -62,19 +65,21 @@ var webpackConfig = merge(baseWebpackConfig, {
         //     chunksSortMode: 'dependency'
         // }),
         // split vendor js into its own file
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: function (module, count) {
-                // any required modules inside node_modules are extracted to vendor
-                return (
-                    module.resource &&
-                    /\.js$/.test(module.resource) &&
-                    module.resource.indexOf(
-                        path.join(__dirname, '../node_modules')
-                    ) === 0
-                )
-            }
-        }),
+
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor',
+        //     minChunks: function (module, count) {
+        //         // any required modules inside node_modules are extracted to vendor
+        //         return (
+        //             module.resource &&
+        //             /\.js$/.test(module.resource) &&
+        //             module.resource.indexOf(
+        //                 path.join(__dirname, '../node_modules')
+        //             ) === 0
+        //         )
+        //     }
+        // }),
+
         // extract webpack runtime and module manifest to its own file in order to
         // prevent vendor hash from being updated whenever app bundle is updated
         // new webpack.optimize.CommonsChunkPlugin({

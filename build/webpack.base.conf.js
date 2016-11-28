@@ -10,8 +10,7 @@ var autoprefixer = require('autoprefixer');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: {
-        app: './index.jsx',
+    entry: {        
         styles: './assets/styles/index.less'
     },
     output: {

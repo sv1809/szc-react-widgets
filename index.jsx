@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Select from './src/select/select';
+import Widgets from './index.js';
+
+const Select = Widgets.Select;
 
 const selectItems = []
 

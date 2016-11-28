@@ -11,10 +11,9 @@ Object.keys(baseWebpackConfig.entry).forEach(function (name) {
 })
 
 module.exports = merge(baseWebpackConfig, {
-  // entry: {
-  //   fa: 'font-awesome/css/font-awesome.min.css',
-  //   dev: './src/dev.ts'
-  // },
+  entry: {
+    index: './index.jsx',
+  },
   module: {
     loaders: utils.styleLoaders(),
     preLoaders: [
