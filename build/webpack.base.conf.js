@@ -51,10 +51,5 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(config.build.assetsRoot, { root: path.resolve(__dirname, '..') }),
         new ExtractTextPlugin(`styles/[name].css`, { allChunks: true, publicPath: '../' }),
-        new webpack.ProvidePlugin({
-            ol: "openlayers",
-            Promise: "es6-promise"
-        }),
-        new CopyWebpackPlugin([{ from: './plugins', to: 'plugins' }])
     ]
 }
