@@ -16,7 +16,8 @@ module.exports = {
     output: {
         path: config.build.assetsRoot,
         publicPath: config.build.assetsPublicPath,
-        filename: '[name].js'
+        filename: '[name].js',
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],
