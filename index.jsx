@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom';
 import Widgets from './index.js';
 
 const Select = Widgets.Select;
+const Tabs = Widgets.Tabs;
+const Pane = Widgets.Pane;
 
 const selectItems = []
 
@@ -27,7 +29,16 @@ class App extends React.Component {
     }
 
     render() {
-        return (<Select value={this.state.value} items={selectItems} onSelect={this.onSelect} idField='value' textField='label' nullable={true} searchable={true} />);
+        return (<Tabs>
+            <Pane label='Tab1'>
+                <span>Tab 1 content</span>
+                <Select value={this.state.value} items={selectItems} onSelect={this.onSelect} idField='value' textField='label' nullable={true} searchable={true} />
+            </Pane>
+            <Pane label='Tab2'>
+                <span>Tab 2 content</span>
+                <Select value={this.state.value} items={selectItems} onSelect={this.onSelect} idField='value' textField='label' nullable={true} searchable={true} />
+            </Pane>
+        </Tabs>);
     }
 }
 

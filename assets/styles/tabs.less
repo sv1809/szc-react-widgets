@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import './helpers';
+.@{prefix}tabs-labels {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    .@{prefix}tab-header {
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.@{prefix}tab-header__text {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #000;
+    display: block;
+    &:hover {
+        background-color: #ccc;
+    }
+}
+
+.@{prefix}tab-header__text--active {
+    background-color: @active-color;
+    border-color: @active-color;
+    color: #fff;
+    cursor: default;
+    &:hover {
+        background-color: @active-color;
+    }
+}

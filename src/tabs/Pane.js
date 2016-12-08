@@ -6,7 +6,7 @@ const Pane = ({ label, children }) => (<div>
 
 Pane.propTypes = {
     label: PropTypes.string.isRequired,
-    children: PropTypes.element.isRequired
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]).isRequired
 };
 
 export default Pane;
