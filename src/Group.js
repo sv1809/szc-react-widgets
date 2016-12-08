@@ -11,8 +11,11 @@ export default class Group extends Component {
         expanded: PropTypes.bool
     }
 
-    state = {
-        expanded: !!this.props.expanded
+    constructor(props) {
+        super(props);
+        this.state = {
+            expanded: !!props.expanded
+        }
     }
 
     showHideContent = () => {
