@@ -12,7 +12,7 @@ export default class Group extends Component {
     }
 
     state = {
-        expanded: !!props.expanded
+        expanded: !!this.props.expanded
     }
 
     showHideContent = () => {
