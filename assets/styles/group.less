@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "helpers";
+.@{prefix}group {}
+
+.@{prefix}group-caption {
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.@{prefix}group-caption__text {
+    cursor: pointer;
+}
+
+.@{prefix}group-caption__icon {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #555;
+    margin-right: 5px;
+}
+
+.@{prefix}group-caption__icon--expanded {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #555;
+    border-bottom: none;
+}
+
+.@{prefix}group-content {
+    padding: 10px;
+}

@@ -5,6 +5,7 @@ import Widgets from './index.js';
 const Select = Widgets.Select;
 const Tabs = Widgets.Tabs;
 const Pane = Widgets.Pane;
+const Group = Widgets.Group;
 
 const selectItems = []
 
@@ -28,11 +29,21 @@ class App extends React.Component {
         })
     }
 
+    groupInner = () => {
+        const res = [];
+        for (let i = 0; i < 50; i++) {
+            res.push(<div key={i}>{'groupInner ' + i}</div>)
+        }
+        return res;
+    }
+
     render() {
         return (<Tabs>
             <Pane label='Tab1'>
                 <span>Tab 1 content</span>
-                <Select value={this.state.value} items={selectItems} onSelect={this.onSelect} idField='value' textField='label' nullable={true} searchable={true} />
+                <Group caption="Test group" expanded={true}>
+                    {this.groupInner()}
+                </Group>
             </Pane>
             <Pane label='Tab2'>
                 <span>Tab 2 content</span>
