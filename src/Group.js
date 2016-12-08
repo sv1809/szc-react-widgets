@@ -8,18 +8,11 @@ export default class Group extends Component {
     static propTypes = {
         caption: PropTypes.string,
         children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
-        expanded: PropTypes.bool,
-    }
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            expanded: !!props.expanded
-        }
+        expanded: PropTypes.bool
     }
 
     state = {
-        expanded: false,
+        expanded: !!props.expanded
     }
 
     showHideContent = () => {
