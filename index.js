@@ -1,4 +1,4 @@
-import select from './src/select/select';
+import select from './src/select/Select';
 
 export default {
     Select: select
