@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import Collapse from 'react-collapse';
 import classnames from 'classnames';
 
 import helpers from './helpers';
@@ -41,11 +40,11 @@ export default class Group extends Component {
                     {this.props.caption}
                 </label>
             </div>
-            <Collapse isOpened={this.state.expanded}>
-                <div className={helpers.cssPrefix + 'group-content'}>
+            {
+                this.state.expanded && <div className={helpers.cssPrefix + 'group-content'}>
                     {this.props.children}
                 </div>
-            </Collapse>
+            }
         </div>)
     }
 }
