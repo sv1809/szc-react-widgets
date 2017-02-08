@@ -9,7 +9,8 @@ export default class Tabs extends Component {
         children: React.PropTypes.oneOfType([
             React.PropTypes.array,
             React.PropTypes.element
-        ]).isRequired
+        ]).isRequired,
+        onTabSelected: React.PropTypes.func,
     }
 
     state = {
@@ -20,6 +21,10 @@ export default class Tabs extends Component {
         event.preventDefault();
         this.setState({
             selected: index
+        }, () => {
+            if (this.props.onTabSelected != null && typeof this.props.onTabSelected === "function") {
+                this.props.onTabSelected(index);
+            }
         });
     }
 
@@ -30,7 +35,7 @@ export default class Tabs extends Component {
                 <li key={index} className={helpers.cssPrefix + 'tab-header'}>
                     <a href="#"
                         className={tabClass}
-                        onClick={this.handleClick.bind(this, index)}>
+                        onClick={e => this.handleClick(index, e)}>
                         {child.props.label}
                     </a>
                 </li>
