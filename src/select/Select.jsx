@@ -78,8 +78,7 @@ class Select extends React.Component {
     }
 
     hideList() {
-        this.iFa.classList.remove('fa-sort-up', `${helpers.cssPrefix}select-item__i--up`);
-        this.iFa.classList.add('fa-sort-desc');
+        this.iFa.classList.remove(`${helpers.cssPrefix}select-item__i--up`);
         this.list.classList.remove(this.listVisibleClass);
         this.input.style.borderBottomLeftRadius = null;
         this.input.style.borderBottomRightRadius = null;
@@ -161,8 +160,7 @@ class Select extends React.Component {
         if (isListVisible) {
             this.hideList();
         } else {
-            this.iFa.classList.remove('fa-sort-desc');
-            this.iFa.classList.add('fa-sort-up', `${helpers.cssPrefix}select-item__i--up`);
+            this.iFa.classList.add(`${helpers.cssPrefix}select-item__i--up`);
             this.showList();
         }
     }
